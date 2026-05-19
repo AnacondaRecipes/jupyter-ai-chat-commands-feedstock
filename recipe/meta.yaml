@@ -41,12 +41,14 @@ test:
     - python -c "from importlib.metadata import version; assert(version('{{ name }}')=='{{ version }}')"
 
 about:
-  homepage: https://github.com/jupyter-ai-contrib/jupyter-ai-chat-commands
-  summary: "Default set of chat commands in Jupyter AI"
+  home: https://github.com/jupyter-ai-contrib/jupyter-ai-chat-commands
+  summary: Default set of chat commands in Jupyter AI
+  description: Default set of chat commands in Jupyter AI
   license: BSD-3-Clause
+  license_family: BSD
   license_file: LICENSE
-  documentation: https://jupyter-ai.readthedocs.io/
-  repository: https://github.com/jupyter-ai-contrib/jupyter-ai-chat-commands
+  dev_url: https://jupyter-ai.readthedocs.io
+  doc_url: https://github.com/jupyter-ai-contrib/jupyter-ai-chat-commands
 
 extra:
   recipe-maintainers:
