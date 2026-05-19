@@ -24,10 +24,12 @@ requirements:
     - hatch-jupyter-builder >=0.5
   run:
     - python
-    - jupyter-ai-persona-manager >=0.0.3
-    - jupyter-ai-router >=0.0.2
     - jupyter_server >=2.4.0,<3
     - jupyterlab-chat >=0.17.0
+    - jupyter-ai-router >=0.0.2
+    - jupyter-ai-persona-manager >=0.0.3
+  run_constrained:
+    - jupyterlab >=4.0.0,<5
 
 tests:
   - python:
