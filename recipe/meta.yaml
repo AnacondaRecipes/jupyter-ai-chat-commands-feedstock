@@ -10,20 +10,20 @@ source:
   sha256: 0c9722d139376e1bff87a730fbb6cc14019b010282fbce9d62001223d3d3c6b0
 
 build:
-  noarch: python
-  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  skip: true  # [py<310]
   number: 0
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - python ${{ python_min }}.*
+    - python
     - pip
     - hatchling >=1.5.0
     - jupyterlab >=4.0.0,<5
     - hatch-nodejs-version >=0.3.2
     - hatch-jupyter-builder >=0.5
   run:
-    - python >=${{ python_min }}
+    - python
     - jupyter-ai-persona-manager >=0.0.3
     - jupyter-ai-router >=0.0.2
     - jupyter_server >=2.4.0,<3
@@ -36,7 +36,7 @@ tests:
       pip_check: true
     requirements:
       run:
-        - python ${{ python_min }}.*
+        - python
 
 about:
   homepage: https://github.com/jupyter-ai-contrib/jupyter-ai-chat-commands
