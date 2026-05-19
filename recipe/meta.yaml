@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/j/jupyter-ai-chat-commands/jupyter_ai_chat_commands-${{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-','_') }}-{{ version }}.tar.gz
   sha256: 0c9722d139376e1bff87a730fbb6cc14019b010282fbce9d62001223d3d3c6b0
 
 build:
