@@ -38,6 +38,7 @@ test:
     - pip
   commands:
     - pip check
+    - python -c "from importlib.metadata import version; assert(version('{{ name }}')=='{{ version }}')"
 
 about:
   homepage: https://github.com/jupyter-ai-contrib/jupyter-ai-chat-commands
