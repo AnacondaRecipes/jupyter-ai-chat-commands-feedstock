@@ -1,9 +1,9 @@
-context:
-  version: "0.0.4"
+{% set name = "jupyter-ai-chat-commands" %}
+{% set version = "0.0.4" %}
 
 package:
-  name: jupyter-ai-chat-commands
-  version: ${{ version }}
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.org/packages/source/j/jupyter-ai-chat-commands/jupyter_ai_chat_commands-${{ version }}.tar.gz
